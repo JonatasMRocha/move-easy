@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import firebase from 'firebase/compat/app';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Observable, of } from 'rxjs';
 
 
 
@@ -8,6 +9,10 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   providedIn: 'root'
 })
 export class AuthenticationService {
+
+  getAuthState() :Observable<any>{
+    return of({})
+  }
   constructor(public ngFireAuth:AngularFireAuth) { }
   
   isAuthenticated(): boolean {

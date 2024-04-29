@@ -1,13 +1,24 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>booking</ion-title>
+    <ion-title>Book a Viewing</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">booking</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="name" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Phone Number</ion-label>
+      <ion-input formControlName="phoneNumber" required type="tel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Message</ion-label>
+      <ion-textarea formControlName="message"></ion-textarea>
+    </ion-item>
+    <ion-button type="submit" expand="block" [disabled]="!bookingForm.valid">Make Enquiry</ion-button>
+  </form>
 </ion-content>
+
