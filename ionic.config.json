@@ -1,0 +1,7 @@
+{
+  "name": "MoveEasy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "moveeasy-882f3": {
+      "hosting": {
+        "app": [
+          "moveeasy-882f3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "moveeasy-882f3"
+  }
+}
